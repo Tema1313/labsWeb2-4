@@ -3,60 +3,32 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Swiper demo</title>
+  <title>Calc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-
-  <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    swiper-container {
-      width: 100%;
-      height: 100%;
-    }
-
-    swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    swiper-slide img {
-      display: block;
-      width: 50%;
-      height: 50%;
-    }
-  </style>
+  <link href="./style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <swiper-container class="mySwiper" navigation="true">
-    <swiper-slide><img src="./images/1597994299_3.jpg"></swiper-slide>
-    <swiper-slide><img src="./images/maxresdefault.jpg"></swiper-slide>
-    <swiper-slide><img src="./images/success-1024x633.jpg"></swiper-slide>
-    <swiper-slide><img src="./images/1644924503_1-fikiwiki-com-p-kartinki-uspeshnikh-lyudei-1.jpg"></swiper-slide>
-    <swiper-slide><img src="./images/62a6a7a3581f0.jpg"></swiper-slide>
-    <swiper-slide><img src="./images/kartinki-uspeshnyh-lyudej-1.jpeg"></swiper-slide>
-  </swiper-container>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-
+  <div class="container_form">
+    <!-- Вид вклада -->
+      <form>
+        <div class="container_select">
+          <select id="typeOfContribution" onchange="changeTypeOfContribution()">
+            <option selected disabled hidden>Вид вклада</option>
+            <option>Пополняемый</option>
+            <option>Срочный</option>
+          </select>
+          <!-- срок вклада -->
+            <select id="depositTerm">
+              <option selected disabled hidden>Срок вклада</option>
+            </select>
+        </div>
+        <p class="amount"><br>
+          <input id="sumAmount" type="number" size="27" placeholder="Сумма, руб.">
+        </p>
+      </form>
+      <button class="button_calculate" onclick="creatingDeposit()">Рассчитать</button>
+  </div>
+  <div id="result" class="container_result"></div>
+  <script src="./index.js"></script>
 </body>
-
-</html>
-
