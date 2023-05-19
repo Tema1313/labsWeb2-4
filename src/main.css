@@ -117,3 +117,11 @@ body {
 .button_calculate{
     margin-top: 5px;
 }
+
+.resultSearch{
+  width: 400px;
+  height: 400px;
+  overflow: auto;
+  border: 1px solid black;
+  margin-top: 10px;
+}

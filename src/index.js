@@ -1,4 +1,24 @@
 import './main.css';
+import axios from 'axios';
+
+// console.log(axios)
+
+// function search() {
+//     console.log("a")
+// }
+// axios.get('https://api.hh.ru/vacancies?text=frontend')
+//   .then(function (response) {
+//     // обработка успешного запроса
+
+//     console.log(response.data.items)
+//   })
+//   .catch(function (error) {
+//     // обработка ошибки
+//     console.log(error);
+//   })
+//   .finally(function () {
+//     // выполняется всегда
+//   });
 
 //Пополняемый
 let arrReplenished = [

@@ -43,7 +43,7 @@ module.exports = {
         new FileManagerPlugin({
             events: {
                 onStart: {
-                    // delete: ['dist'].map(it => normalizePath(path.join(__dirname, it))),
+                    delete: ['dist'].map(it => normalizePath(path.join(__dirname, it))),
                 },
             },
         }),
