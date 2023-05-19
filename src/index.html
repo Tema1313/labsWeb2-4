@@ -7,8 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Файл создан плагином html-webpack-plugi</p></body>
-    <img src="./images/1.jpg">
-    <img src="./images/2.png">
-    <img src="./images/3.svg">
+    <div class="container_form">
+        <!-- Вид вклада -->
+          <form>
+            <div class="container_select">
+              <select id="typeOfContribution" onchange="changeTypeOfContribution()">
+                <option selected disabled hidden>Вид вклада</option>
+                <option>Пополняемый</option>
+                <option>Срочный</option>
+              </select>
+              <!-- срок вклада -->
+                <select id="depositTerm">
+                  <option selected disabled hidden>Срок вклада</option>
+                </select>
+            </div>
+            <p class="amount"><br>
+              <input id="sumAmount" type="number" size="27" placeholder="Сумма, руб.">
+            </p>
+          </form>
+          <button class="button_calculate" onclick="creatingDeposit()">Рассчитать</button>
+      </div>
+</body>
 </html>
